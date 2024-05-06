@@ -1,0 +1,30 @@
+Recap
+We covered a lot of ground! It's ok if this takes a while to gel.
+
+
+# basic DataFrame operations
+df.head()
+df.tail()
+df.shape
+df.columns
+df.Index
+
+# selecting columns
+df.column_name
+df['column_name']
+
+# renaming columns
+df.rename({'old_name':'new_name'}, inplace=True)
+df.columns = ['new_column_a', 'new_column_b']
+
+# notable columns operations
+df.describe() # five number summary
+df['col1'].nunique() # number of unique values
+df['col1'].value_counts() # number of occurrences of each value in column
+
+# filtering
+df[ df['col1'] < 50 ] # filter column to be less than 50
+df[ (df['col1'] == value1) & (df['col2'] > value2) ] # filter column where col1 is equal to value1 AND col2 is greater to value 2
+
+# sorting
+df.sort_values(by='column_name', ascending = False) # sort biggest to smallest
